@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -7,4 +8,9 @@
 body  {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
+  
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
 }
