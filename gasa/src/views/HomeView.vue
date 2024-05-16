@@ -1,8 +1,8 @@
 
 
 <script setup>
-import mainpage from '@/Components/mainpage.vue';
-import navbar from '@/Components/navbar.vue';
+import mainpage from '@/components/mainpage.vue';
+import navbar from '@/components/navbar.vue';
 
 </script>
 
