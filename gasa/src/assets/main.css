@@ -1,0 +1,76 @@
+<<<<<<< Updated upstream
+=======
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+
+
+.sidebar {
+    background-color: #2E616B;
+    padding: solid;
+    max-width: 380px;
+    min-height: 100%;
+    height: 100%;
+    z-index: 99;
+}
+.logo_sidebar {
+    width: 250px;
+    margin: 50px 0 40px 50px;
+}
+
+.navbar_list {
+    color: #FCEDD4;
+    font-family: 'Staatliches';
+    list-style-type: none;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+li {
+    margin-top: 14px;
+    max-width: 230px;
+}
+li:hover {
+    cursor: pointer;
+    margin-left: 5px;
+    transition: 0.5s;
+}
+.li_selected {
+    border-left: solid #D7E60F;
+    padding: 5px;
+    margin-left: -7px;
+}
+.li_selected:hover{
+    margin-left: -7px;
+}
+.sidebar_line {
+    color: #FCEDD4;
+    border-style: dashed solid;
+}
+.sidebar_fb_ig {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+.some_icon {
+    width:40px
+}
+.some_text {
+    font-family: 'Staatliches';
+    color: #FCEDD4;
+    float: right;
+    font-size: 15px;
+}
+.bargroup_logo_flex {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.bargroup_logo {
+    width: 130px;
+}
+>>>>>>> Stashed changes
