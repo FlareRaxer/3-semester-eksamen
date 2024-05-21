@@ -8,13 +8,13 @@ import navbar from '@/Components/navbar.vue';
 
 <template>
   <div class="page-grid">
-  <header>
-    <navbar />
-  </header>
-  
-  <main>
-   <mainpage />
+    <header>
+      <navbar />
+    </header>
+    
+    <main>
+    <mainpage />
 
-  </main>
+    </main>
 </div>
 </template>
