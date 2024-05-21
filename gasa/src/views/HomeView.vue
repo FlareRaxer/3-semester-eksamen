@@ -1,16 +1,20 @@
 
 
 <script setup>
-import mainpage from '@/components/mainpage.vue';
-import navbar from '@/components/navbar.vue';
+import mainpage from '@/Components/mainpage.vue';
+import navbar from '@/Components/navbar.vue';
 
 </script>
 
 <template>
+  <div class="page-grid">
+  <header>
+    <navbar />
+  </header>
+  
   <main>
-   <navbar />
    <mainpage />
 
-
   </main>
+</div>
 </template>
