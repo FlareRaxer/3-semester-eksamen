@@ -3,6 +3,7 @@
 <script setup>
 import mainpage from '@/Components/mainpage.vue';
 import navbar from '@/Components/navbar.vue';
+import Footeren from '@/Components/Footeren.vue';
 
 </script>
 
@@ -11,6 +12,9 @@ import navbar from '@/Components/navbar.vue';
   <header>
     <navbar />
   </header>
+  <footer>
+    <Footeren />
+  </footer>
   
   <main>
    <mainpage />
