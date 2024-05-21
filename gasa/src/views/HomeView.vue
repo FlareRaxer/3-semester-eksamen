@@ -12,13 +12,11 @@ import Footeren from '@/Components/Footeren.vue';
   <header>
     <navbar />
   </header>
+  <main>
+   <mainpage />
+  </main>
   <footer>
     <Footeren />
   </footer>
-  
-  <main>
-   <mainpage />
-
-  </main>
 </div>
 </template>
