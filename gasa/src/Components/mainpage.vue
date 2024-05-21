@@ -7,7 +7,7 @@
 <template>
   <section class="video-container">
     <video class="introvideo" autoplay loop muted>
-      <source src="@/img/GASA_Video.mp4" type="video/mp4">
+      <source src="@/img/gasa_video.webm" type="video/webm">
       Your browser does not support the video tag.
     </video>
   </section>
