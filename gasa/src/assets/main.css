@@ -78,15 +78,16 @@ li:hover {
 }
 
 .page-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: 380px 1fr;
     flex-direction: row;
     
 }
 
 .video-container {
-    position: relative;
-    flex-grow: 1;
-    height: 1500px;
+    box-sizing: border-box;
+    display: block;
+    height: 70vh;
     width: 100%;
     overflow: hidden;
   }
@@ -107,4 +108,9 @@ li:hover {
     color: white; /* Adjust as needed for text readability */
     padding: 20px;
     width: 100%;
+    box-sizing: border-box;
+  }
+  div {
+    width: 100%;
+    
   }

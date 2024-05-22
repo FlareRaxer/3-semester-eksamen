@@ -9,14 +9,14 @@ import Footeren from '@/Components/Footeren.vue';
 
 <template>
   <div class="page-grid">
-  <header>
-    <navbar />
-  </header>
-  <main>
-   <mainpage />
-  </main>
-  <footer>
-    <Footeren />
-  </footer>
+    <header>
+      <navbar />
+    </header>
+    <main >
+      <mainpage />
+    </main>
+    <footer>
+      <Footeren />
+    </footer>
 </div>
 </template>
