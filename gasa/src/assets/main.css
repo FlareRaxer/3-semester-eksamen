@@ -21,12 +21,12 @@ body {
     position: fixed;
     overflow-y: scroll;
 }
-.logo_sidebar {
+.logo-sidebar {
     width: 250px;
     margin: 50px 50px 40px 50px;
 }
 
-.navbar_list {
+.navbar-list {
     color: #FCEDD4;
     font-family: 'Staatliches';
     list-style-type: none;
@@ -42,40 +42,40 @@ li:hover {
     margin-left: 5px;
     transition: 0.5s;
 }
-.li_selected {
+.li-selected {
     border-left: solid #D7E60F;
     padding: 5px;
     margin-left: -7px;
 }
-.li_selected:hover{
+.li-selected:hover{
     margin-left: -7px;
 }
-.sidebar_line {
+.sidebar-line {
     color: #FCEDD4;
     border-style: dashed solid;
 }
-.sidebar_fb_ig {
+.sidebar-fb-ig {
     display: flex;
     justify-content: center;
     gap: 40px;
     margin-top: 50px;
 }
-.some_icon {
+.some-icon {
     width:40px
 }
-.some_text {
+.some-text {
     font-family: 'Staatliches';
     color: #FCEDD4;
     float: right;
     font-size: 15px;
 }
-.bargroup_logo_flex {
+.bargroup-logo-flex {
     display: flex;
     justify-content: center;
     margin-top: 60px;
     margin-bottom: 60px;
 }
-.bargroup_logo {
+.bargroup-logo {
     width: 130px;
 }
 
