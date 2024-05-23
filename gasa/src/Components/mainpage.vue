@@ -5,7 +5,7 @@
 
 
 <template>
-  <div >
+  <div class="content-page">
     <section class="video-container">
       <video class="introvideo" autoplay loop muted>
         <source src="@/img/gasa_video.webm" type="video/webm">
