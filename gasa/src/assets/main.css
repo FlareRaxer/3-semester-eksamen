@@ -16,6 +16,11 @@ body {
     flex-direction: row;
     flex-grow: 1; /* Make the page grid take the remaining space */
   }
+
+  main {
+    overflow: hidden;
+  }
+
 .sidebar {
     background-color: #2E616B;
     max-width: 380px;
@@ -28,6 +33,11 @@ body {
     /* Scrollbar styling */
     scrollbar-color: #fcedd4 #2E616B;
     scrollbar-width: thin;
+}
+
+.price  {
+    margin-top: 10px;
+    margin-left: 60px;
 }
 
 /* Scrollbar styling for WebKit-based browsers */
