@@ -18,9 +18,33 @@
             <button class="button-overst">LÆS OM G.A.S.A. HER</button>
             <button class="button-overst">LÆS OM HALLUNDSBÆK HER</button>
           </div>
-          <h1>VELKOMMEN TIL G.A.S.A.</h1>
-          <p>Indsæt tekst her</p>
+          <h1>ARRANGEMTER & EVENTS</h1>
       </section>
+      <section class="arrangement-details">
+      <div class="firma-arrangementer-details">
+        <h2>FIRMAARRANGEMENTER</h2>
+        <p>• Velkomstdrink (tilkøb)</p>
+        <p>• Årstidens 3-retters menu</p>
+        <p>• Opdækning med stofduge og service</p>
+        <p>• Fri bar gennem hele arrangementet</p>
+        <p>• Kaffe og te (tilkøb)</p>
+        <p>• Natmad (tilkøb)</p>
+        <p>• Mulighed for yderligere tilkøb</p>
+        <p class="price">PRIS FRA 680,-</p>
+      </div>
+      <div class="dagsmøder-details">
+        <h2>DAGSMØDER OG KONFERENCER</h2>
+        <p>• Morgenmad eller frokost</p>
+        <p>• Kaffe/te samt isvand ad libitum</p>
+        <p>• Opstilling af borde og stole</p>
+        <p>• Frugt</p>
+        <p>• AV udstyr (tilkøb)</p>
+        <p>• Ekstra forplejning (tilkøb)</p>
+        <p>• Mulighed for yderligere tilkøb</p>
+        <p class="price">PRIS FRA 280,-</p>
+      </div>
+    </section>
+      
   </div>
   <div class="footer">
     <div class="footer-box">
