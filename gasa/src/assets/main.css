@@ -53,6 +53,7 @@ body {
 .logo-sidebar {
     width: 250px;
     margin: 50px 50px 40px 50px;
+    cursor: pointer;
 }
 
 .navbar-list {
@@ -90,6 +91,17 @@ li:hover {
     gap: 40px;
     margin-top: 50px;
 }
+
+.sidebar-some {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.sidebar-some:hover {
+    opacity: 70%;
+    transition: 0.5s;
+}
+
 .some-icon {
     width:40px
 }
