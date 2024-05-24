@@ -15,10 +15,10 @@
 
       <section class="firma-arrangementer">
           <div class="button-firma">
-            <button>FIRMA- OG PRIVATARRANGEMENTER</button>
-            <button>PRIVATE SELSKABER OG BEGIVENHEDER</button>
+            <button class="button-overst">LÆS OM G.A.S.A. HER</button>
+            <button class="button-overst">LÆS OM HALLUNDSBÆK HER</button>
           </div>
-          <h1>ARRANGEMENTER & EVENTS</h1>
+          <h1>VELKOMMEN TIL G.A.S.A.</h1>
           <p>Indsæt tekst her</p>
       </section>
   </div>

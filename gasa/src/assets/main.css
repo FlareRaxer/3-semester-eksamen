@@ -132,12 +132,28 @@ li:hover {
     box-sizing: border-box;
 }
 
+.button-overst {
+    background: #051424;
+    border: none;
+    padding: 13px;
+    color: white;
+    font-family: 'Staatliches';
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.70s;
+}
+.button-overst:hover {
+    color: #D7E60F;
+    transition: 0.70s;
+}
+
 
 .content-page h1 {
     font-family: 'Staatliches';
     font-size: 40px;
     color: #051424;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-bottom: 0;
 }
 
