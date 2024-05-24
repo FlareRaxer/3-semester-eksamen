@@ -20,16 +20,16 @@
    </nav>
    <hr class="sidebar-line">
    <div class="sidebar-fb-ig">
-    <div>
+    <div class="sidebar-some">
      <img src="@/img/icon_facebook.svg" class="some-icon">
      <p class="some-text">FACEBOOK</p>
     </div>
-    <div>
+    <div class="sidebar-some">
       <img src="@/img/icon_instagram.svg" class="some-icon">
      <p class="some-text">INSTAGRAM</p>
     </div>
    </div>
-   <div class="bargroup-logo-flex">
+   <div class="bargroup-logo-flex sidebar-some">
     <img src="@/img/bargroup_logo.png" class="bargroup-logo">
    </div>
   </div>
