@@ -18,7 +18,7 @@
             <button>FIRMA- OG PRIVATARRANGEMENTER</button>
             <button>PRIVATE SELSKABER OG BEGIVENHEDER</button>
           </div>
-          <h1>VELKOMMEN TIL G.A.S.A.</h1>
+          <h1>ARRANGEMENTER & EVENTS</h1>
           <p>Indsæt tekst her</p>
       </section>
   </div>

@@ -117,20 +117,35 @@ li:hover {
 .content-page {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    
 }
+
+.firma-arrangementer {
+    padding: 5px 30px 10px 30px;
+    box-sizing: border-box;
+}
+
+.button-firma {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 
 .content-page h1 {
     font-family: 'Staatliches';
     font-size: 40px;
     color: #051424;
-    margin: 50px 0 20px 50px;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .content-page p {
     font-family: 'Roboto';
     font-size: 20px;
     color: #051424;
-    margin: 0 0 20px 50px;
+   
 
 }
 
@@ -147,6 +162,7 @@ li:hover {
     height: 70vh;
     width: 100%;
     overflow: hidden;
+    border-bottom: 5px solid #d7e60f;
   }
   
   .introvideo {
