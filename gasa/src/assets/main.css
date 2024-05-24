@@ -123,6 +123,7 @@ li:hover {
 .firma-arrangementer {
     padding: 5px 30px 10px 30px;
     box-sizing: border-box;
+    background-color: #fcedd4;
 }
 
 .button-firma {
@@ -155,6 +156,15 @@ li:hover {
     color: #051424;
     margin-top: 25px;
     margin-bottom: 0;
+}
+
+.content-page h1::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #D7E60F;
+    margin-top: 30px;
 }
 
 .content-page p {
