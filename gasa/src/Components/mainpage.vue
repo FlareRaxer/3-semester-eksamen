@@ -44,8 +44,26 @@
         <p class="price">PRIS FRA 280,-</p>
       </div>
     </section>
-      
   </div>
+  <section>
+    <div class="booking">
+      <a>
+        <button class="booking-button">
+          BOOK HER
+        </button>
+      </a>
+    </div>
+  </section>
+  <section class="reviews">
+    <h2 class="sektionsoverskrifter">Hvad vores kunder siger</h2>
+    <div class="review-grid">
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmichael.bagger.96%2Fposts%2Fpfbid0NaFqUegHdaNaJAC1m4kDqdW4wjbQgzQzLedCzkQtC99Xbj2ny3rBmQqxwaNgUBDUl&show_text=true&width=500&is_preview=true" width="500" height="194" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmarianne.henriksen.739%2Fposts%2Fpfbid0hFcxu7eb4KkA3S2TAGyTuERhseretTYo3CZ2DCtr4725AP5icXSgMo94o3Eqc7eGl&show_text=true&width=500&is_preview=true" width="500" height="189" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsiatoftdal%2Fposts%2Fpfbid0PYpwmddYXRPJcnMM6K6N5WDDCTsbK2mj2jAtsnEeTcSbAFkHxeSjJzEPrj8zzg4Al&show_text=true&width=500&is_preview=true" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Flone.pedersen.9406%2Fposts%2Fpfbid028U4433JcrP2RsYEK4P8SFLsA1ZKVgPordyQkpeJvHgANveceBo8MdtrSWRwq11Rgl&show_text=true&width=500&is_preview=true" width="500" height="170" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  </div>
+  </section>
+  <footer>
   <div class="footer">
     <div class="footer-box">
      <img src="@/img/gasa_logo_bittergreen.png" class="footer-gasa-logo">
@@ -81,4 +99,5 @@
      </div>
    </div>
   </div>
+  </footer>
 </template>
