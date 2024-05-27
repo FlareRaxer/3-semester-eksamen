@@ -31,7 +31,7 @@ body {
     overflow-y: scroll;
     box-shadow: rgba(100, 100, 111, 0.2) 10px 15px 29px 0px;
     /* Scrollbar styling */
-    scrollbar-color: #fcedd4 #2E616B;
+    scrollbar-color: #ffffff40 #2E616B;
     scrollbar-width: thin;
 }
 
