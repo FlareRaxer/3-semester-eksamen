@@ -23,53 +23,66 @@ import Footeren from './Footeren.vue';
       <section class="arrangement-details">
         <div class="firma-arrangementer-details">
           <h2>FIRMAARRANGEMENTER</h2>
-          <p>• Velkomstdrink (tilkøb)</p>
-          <p>• Årstidens 3-retters menu</p>
-          <p>• Opdækning med stofduge og service</p>
-          <p>• Fri bar gennem hele arrangementet</p>
-          <p>• Kaffe og te (tilkøb)</p>
-          <p>• Natmad (tilkøb)</p>
-          <p>• Mulighed for yderligere tilkøb</p>
-          <p class="price">PRIS FRA 680,-</p>
+          <ul>
+            <li>Velkomstdrink (tilkøb)</li>
+            <li>Årstidens 3-retters menu</li>
+            <li>Opdækning med stofduge og service</li>
+            <li>Fri bar gennem hele arrangementet</li>
+            <li>Kaffe og te (tilkøb)</li>
+            <li>Natmad (tilkøb)</li>
+            <li>Mulighed for yderligere tilkøb</li>
+          </ul>
+          <p class="price">PRIS FRA <span class="price-value">680,-</span></p>
         </div>
         <div class="dagsmøder-details">
           <h2>DAGSMØDER OG KONFERENCER</h2>
-          <p>• Morgenmad eller frokost</p>
-          <p>• Kaffe/te samt isvand ad libitum</p>
-          <p>• Opstilling af borde og stole</p>
-          <p>• Frugt</p>
-          <p>• AV udstyr (tilkøb)</p>
-          <p>• Ekstra forplejning (tilkøb)</p>
-          <p>• Mulighed for yderligere tilkøb</p>
-          <p class="price">PRIS FRA 280,-</p>
+          <ul>
+            <li>Morgenmad eller frokost</li>
+            <li>Kaffe/te samt isvand ad libitum</li>
+            <li>Opstilling af borde og stole</li>
+            <li>Frugt</li>
+            <li>AV udstyr (tilkøb)</li>
+            <li>Ekstra forplejning (tilkøb)</li>
+            <li>Mulighed for yderligere tilkøb</li>
+          </ul>
+          <p class="price">PRIS FRA <span class="price-value">280,-</span></p>
+        </div>
+      </section>
+      <section class="photo-section">
+        <div class="photo-grid">
+          <img src="../img/photo1.jpg" class="showcase-photo">
+          <img src="../img/photo2.jpg" class="showcase-photo">
+          <img src="../img/photo3.jpg" class="showcase-photo">
         </div>
       </section>
       <h1 class="header-privat">PRIVATE ARRANGEMENTER</h1>
     <section class="privat-arrangement">
       <div class="føsbry-details">
         <h2>STOR FØDSELDSAG & BRYLLUP</h2>
-        <p>• Velkomstdrinks</p>
-        <p>• Årstidens 3-retters menu</p>
-        <p>• Opdækning med stofduge og service</p>
-        <p>• Fri bar med øl, vin og sodavand</p>
-        <p>• Friskbrygget kaffe og te</p>
-        <p>• Natmad</p>
-        <p>• Mulighed for yderligere tilkøb</p>
-        <p class="price">PRIS FRA 280,-</p>
+        <ul>
+          <li>Velkomstdrinks</li>
+          <li>Årstidens 3-retters menu</li>
+          <li>Opdækning med stofduge og service</li>
+          <li>Fri bar med øl, vin og sodavand</li>
+          <li>Friskbrygget kaffe og te</li>
+          <li>Natmad</li>
+          <li>Mulighed for yderligere tilkøb</li>
+        </ul>
+        <p class="price">PRIS FRA <span class="price-value">280,-</span></p>
       </div>
       <div class="konbar-details">
         <h2>KONFIRMATION & BARNEDÅB</h2>
-        <p>• Velkomstdrinks</p>
-        <p>• Årstidens 3-retters menu</p>
-        <p>• Bordopdækning med stofduge og servietter</p>
-        <p>• Friskbrygget kaffe og te</p>
-        <p>• Fri bar med øl, vin og sodavand</p>
-        <p>• Mulighed for tilkøb</p>
-        <p class="price">PRIS FRA 280,-</p>
+        <ul>
+          <li>Velkomstdrinks</li>
+          <li>Årstidens 3-retters menu</li>
+          <li>Bordopdækning med stofduge og servietter</li>
+          <li>Friskbrygget kaffe og te</li>
+          <li>Fri bar med øl, vin og sodavand</li>
+          <li>Mulighed for tilkøb</li>
+          <li>Børn under 10 år får halv pris</li>
+        </ul>
+        <p class="price">PRIS FRA <span class="price-value">280,-</span></p>
       </div>
-    </section>
-    <section class="image-slider">
-      
     </section>
       <div class="booking">
         <router-link to="/booking">
