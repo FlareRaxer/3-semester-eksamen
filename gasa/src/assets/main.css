@@ -437,9 +437,6 @@ li:hover {
     width: 150px;
     height: auto;
 }
-<<<<<<< HEAD
-
-=======
 @media (max-width: 1100px) {
     .footer-info-grid {
         grid-template-columns: 1fr;
@@ -449,4 +446,3 @@ li:hover {
         height:fit-content;
     }
 }
->>>>>>> f51df554ac82bce6c975ca8bae89d3201244472e
