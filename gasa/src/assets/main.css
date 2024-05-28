@@ -36,6 +36,40 @@ body {
     scrollbar-width: thin;
 }
 
+.booking-section {
+  background-color: #fcedd4;
+
+}
+
+.header-img {
+  padding: 0;
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.booking-page h1 {
+  font-family: 'Staatliches';
+  font-size: 40px;
+  color: #051424;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.booking-page h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #D7E60F;
+  margin-top: 30px;
+}
 
 /* Scrollbar styling for WebKit-based browsers */
 .sidebar::-webkit-scrollbar {
