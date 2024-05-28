@@ -15,8 +15,5 @@ import Footeren from '@/Components/Footeren.vue';
     <main >
       <mainpage />
     </main>
-    <footer>
-      <Footeren />
-    </footer>
 </div>
 </template>

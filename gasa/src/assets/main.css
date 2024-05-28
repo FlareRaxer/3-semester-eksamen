@@ -10,11 +10,12 @@ body {
     scrollbar-color: #ffcc00 #333333; /* thumb color and track color */
     scrollbar-width: thin; /* makes the scrollbar thinner */
   }
-  
-  .page-grid {
+
+  .booking-page {
+    flex-grow: 1; /* Ensure the main content takes the remaining space */
+    margin-left: 361px; /* Adjust according to the width of the sidebar */
     display: flex;
-    flex-direction: row;
-    flex-grow: 1; /* Make the page grid take the remaining space */
+    flex-direction: column;
   }
 
   main {
