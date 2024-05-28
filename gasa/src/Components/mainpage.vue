@@ -1,6 +1,5 @@
 <script setup>
-
-
+import '@/main.js'
 </script>
 
 
@@ -21,39 +20,67 @@
           <h1>ARRANGEMTER & EVENTS</h1>
       </section>
       <section class="arrangement-details">
-      <div class="firma-arrangementer-details">
-        <h2>FIRMAARRANGEMENTER</h2>
-        <p>• Velkomstdrink (tilkøb)</p>
+        <div class="firma-arrangementer-details">
+          <h2>FIRMAARRANGEMENTER</h2>
+          <p>• Velkomstdrink (tilkøb)</p>
+          <p>• Årstidens 3-retters menu</p>
+          <p>• Opdækning med stofduge og service</p>
+          <p>• Fri bar gennem hele arrangementet</p>
+          <p>• Kaffe og te (tilkøb)</p>
+          <p>• Natmad (tilkøb)</p>
+          <p>• Mulighed for yderligere tilkøb</p>
+          <p class="price">PRIS FRA 680,-</p>
+        </div>
+        <div class="dagsmøder-details">
+          <h2>DAGSMØDER OG KONFERENCER</h2>
+          <p>• Morgenmad eller frokost</p>
+          <p>• Kaffe/te samt isvand ad libitum</p>
+          <p>• Opstilling af borde og stole</p>
+          <p>• Frugt</p>
+          <p>• AV udstyr (tilkøb)</p>
+          <p>• Ekstra forplejning (tilkøb)</p>
+          <p>• Mulighed for yderligere tilkøb</p>
+          <p class="price">PRIS FRA 280,-</p>
+        </div>
+      </section>
+      <h1 class="header-privat">PRIVATE ARRANGEMENTER</h1>
+    <section class="privat-arrangement">
+      <div class="føsbry-details">
+        <h2>STOR FØDSELDSAG & BRYLLUP</h2>
+        <p>• Velkomstdrinks</p>
         <p>• Årstidens 3-retters menu</p>
         <p>• Opdækning med stofduge og service</p>
-        <p>• Fri bar gennem hele arrangementet</p>
-        <p>• Kaffe og te (tilkøb)</p>
-        <p>• Natmad (tilkøb)</p>
-        <p>• Mulighed for yderligere tilkøb</p>
-        <p class="price">PRIS FRA 680,-</p>
-      </div>
-      <div class="dagsmøder-details">
-        <h2>DAGSMØDER OG KONFERENCER</h2>
-        <p>• Morgenmad eller frokost</p>
-        <p>• Kaffe/te samt isvand ad libitum</p>
-        <p>• Opstilling af borde og stole</p>
-        <p>• Frugt</p>
-        <p>• AV udstyr (tilkøb)</p>
-        <p>• Ekstra forplejning (tilkøb)</p>
+        <p>• Fri bar med øl, vin og sodavand</p>
+        <p>• Friskbrygget kaffe og te</p>
+        <p>• Natmad</p>
         <p>• Mulighed for yderligere tilkøb</p>
         <p class="price">PRIS FRA 280,-</p>
       </div>
+      <div class="konbar-details">
+        <h2>KONFIRMATION & BARNEDÅB</h2>
+        <p>• Velkomstdrinks</p>
+        <p>• Årstidens 3-retters menu</p>
+        <p>• Bordopdækning med stofduge og servietter</p>
+        <p>• Friskbrygget kaffe og te</p>
+        <p>• Fri bar med øl, vin og sodavand</p>
+        <p>• Mulighed for tilkøb</p>
+        <p class="price">PRIS FRA 280,-</p>
+      </div>
     </section>
+    <section class="image-slider">
+      
+    </section>
+    <router-link to="/booking">
+      <div class="booking">
+        <a>
+          <button class="booking-button">
+            BOOK HER
+          </button>
+        </a>
+      </div>
+    </router-link>
   </div>
-  <section>
-    <div class="booking">
-      <a>
-        <button class="booking-button">
-          BOOK HER
-        </button>
-      </a>
-    </div>
-  </section>
+
   <section class="reviews">
     <h2 class="sektionsoverskrifter">Hvad vores kunder siger</h2>
     <div class="review-grid">
