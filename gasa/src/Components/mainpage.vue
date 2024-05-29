@@ -68,7 +68,7 @@ import Footeren from './Footeren.vue';
           <li>Natmad</li>
           <li>Mulighed for yderligere tilkøb</li>
         </ul>
-        <p class="price">PRIS FRA <span class="price-value">280,-</span></p>
+        <p class="price">PRIS FRA <span class="price-value">1.095,-</span></p>
       </div>
       <div class="konbar-details">
         <h2>KONFIRMATION & BARNEDÅB</h2>
@@ -81,7 +81,7 @@ import Footeren from './Footeren.vue';
           <li>Mulighed for tilkøb</li>
           <li>Børn under 10 år får halv pris</li>
         </ul>
-        <p class="price">PRIS FRA <span class="price-value">280,-</span></p>
+        <p class="price">PRIS FRA <span class="price-value">745,-</span></p>
       </div>
     </section>
       <div class="booking">
