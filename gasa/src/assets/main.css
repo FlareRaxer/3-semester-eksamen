@@ -27,6 +27,13 @@ body {
 
 }
 
+.booking-section p {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #051424;
+  margin: 5px 0;
+}
+
 .header-img {
   padding: 0;
   height: 50vh;
@@ -56,6 +63,61 @@ body {
   background-color: #D7E60F;
   margin-top: 30px;
 }
+
+/* Booking kalender styling */
+.calendar-section {
+  background-color: #fcedd4;
+  padding: 20px;
+}
+
+.calendar-header {
+  font-family: 'Staatliches';
+  font-size: 30px;
+  color: #051424;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px;
+  row-gap: 25px;
+  justify-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.date-button {
+  background-color: #d7e60f;
+  border: none;
+  padding: 15px;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 800;
+  color: #051424;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 80%;
+  transform: skew(-10deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.date-button:hover {
+  background-color: #c5d40c;
+}
+
+.date-button span {
+  transform: skew(10deg);
+}
+/*  */
+.calendar-header:nth-of-type(2) {
+  margin-top: 65px; 
+}
+
 
 /* Scrollbar styling for WebKit-based browsers */
 .sidebar::-webkit-scrollbar {
