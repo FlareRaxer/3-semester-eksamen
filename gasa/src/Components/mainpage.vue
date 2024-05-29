@@ -18,7 +18,7 @@ import Footeren from './Footeren.vue';
             <button class="button-overst">LÆS OM G.A.S.A. HER</button>
             <button class="button-overst">LÆS OM HALLUNDSBÆK HER</button>
           </div>
-          <h1>ARRANGEMTER & EVENTS</h1>
+          <h1>ARRANGEMENTER & EVENTS</h1>
       </section>
       <section class="arrangement-details">
         <div class="firma-arrangementer-details">
