@@ -10,7 +10,7 @@
       <li>VIRTUEL RUNDTUR</li>
       <li>STAND-UP EVENTS</li>
       <li>TIL VIRKSOMHEDER</li>
-      <li class="li-selected">FIRMA- OG PRIVATARRANGEMENTER</li>
+      <router-link to="/"><li class="li-selected">FIRMA- OG PRIVATARRANGEMENTER</li></router-link>
       <li>PRIVATE SELSKABER OG BEGIVENHEDER</li>
       <li>BOOK G.A.S.A.'S LOKALER</li>
       <li>TINDERBRUNCH // TINDERBOX</li>
