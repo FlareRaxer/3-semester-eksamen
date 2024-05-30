@@ -167,7 +167,7 @@ body {
   font-size: 18px;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  border-radius: 0px;
   transition: background-color 0.3s;
 }
 
@@ -176,10 +176,17 @@ body {
   color: #051424;
 }
 
+.date-button.booked {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+
+
 /* Scrollbar styling for WebKit-based browsers */
 .sidebar::-webkit-scrollbar {
     width: 6px; 
-    height: 6px; /
+    height: 6px; 
   }
   
   .sidebar::-webkit-scrollbar-track {

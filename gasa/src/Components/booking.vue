@@ -1,11 +1,14 @@
 <script setup>
 import navbar from '@/Components/navbar.vue';
 import Footeren from '@/Components/Footeren.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 
 const showForm = ref(false);
 const selectedDate = ref('');
+const selectedCategory = ref('');
+const bookedDatesPrimary = ref([]);
+const bookedDatesSecondary = ref([]);
 const formData = ref({
   navn: '',
   email: '',
@@ -14,26 +17,62 @@ const formData = ref({
   message: ''
 });
 
-const toggleForm = (date) => {
+const toggleForm = (date, category) => {
   selectedDate.value = date;
+  selectedCategory.value = category;
   showForm.value = !showForm.value;
+};
+
+const fetchBookedDatesPrimary = async () => {
+  try {
+    const response = await fetch('https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json');
+    const data = await response.json();
+    bookedDatesPrimary.value = Object.values(data).map(item => item.date);
+  } catch (error) {
+    console.error('Error fetching booked dates (primary):', error);
+  }
+};
+
+const fetchBookedDatesSecondary = async () => {
+  try {
+    const response = await fetch('https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json');
+    const data = await response.json();
+    bookedDatesSecondary.value = Object.values(data).map(item => item.date);
+  } catch (error) {
+    console.error('Error fetching booked dates (secondary):', error);
+  }
 };
 
 const submitForm = async () => {
   try {
-    await fetch('https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json', {
+    const url =
+      selectedCategory.value === 'primary'
+        ? 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json'
+        : 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json';
+
+    await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ ...formData.value, date: selectedDate.value })
     });
-    alert('Form submitted successfully!');
+    alert('Tak! Vi har modtaget din reservation!');
+    if (selectedCategory.value === 'primary') {
+      bookedDatesPrimary.value.push(selectedDate.value);
+    } else {
+      bookedDatesSecondary.value.push(selectedDate.value);
+    }
     showForm.value = false;
   } catch (error) {
     console.error('Error submitting form:', error);
   }
 };
+
+onMounted(() => {
+  fetchBookedDatesPrimary();
+  fetchBookedDatesSecondary();
+});
 </script>
 
 <template>
@@ -47,70 +86,58 @@ const submitForm = async () => {
             <p class="booking-text">Book dit arrangement hos G.A.S.A. og Hallundsbæk</p>
         </section>
         <section class="calendar-section">
-            <h2 class="calendar-header">LEDIGE DATOER - FÆLLESLOKALE</h2>
+          <h2 class="calendar-header">LEDIGE DATOER - FÆLLESLOKALE</h2>
             <div class="calendar-grid">
-                <button class="date-button" @click="toggleForm('6. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">6. Juni</button>
-                <button class="date-button" @click="toggleForm('7. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">7. Juni</button>
-                <button class="date-button" @click="toggleForm('8. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">8. Juni</button>
-                <button class="date-button" @click="toggleForm('9. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">9. Juni</button>
-                <button class="date-button" @click="toggleForm('13. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">13. Juni</button>
-                <button class="date-button" @click="toggleForm('14. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">14. Juni</button>
-                <button class="date-button" @click="toggleForm('15. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">15. Juni</button>
-                <button class="date-button" @click="toggleForm('16. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">16. Juni</button>
-                <button class="date-button" @click="toggleForm('20. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">20. Juni</button>
-                <button class="date-button" @click="toggleForm('21. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">21. Juni</button>
-                <button class="date-button" @click="toggleForm('22. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">22. Juni</button>
-                <button class="date-button" @click="toggleForm('23. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">23. Juni</button>
-                <button class="date-button" @click="toggleForm('27. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">27. Juni</button>
-                <button class="date-button" @click="toggleForm('28. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">28. Juni</button>
-                <button class="date-button" @click="toggleForm('29. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">29. Juni</button>
-                <button class="date-button" @click="toggleForm('30. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/gasa.json')">30. Juni</button>
+              <button
+                v-for="date in ['6. Juni', '7. Juni', '8. Juni', '9. Juni', '13. Juni', '14. Juni', '15. Juni', '16. Juni', '20. Juni', '21. Juni', '22. Juni', '23. Juni', '27. Juni', '28. Juni', '29. Juni', '30. Juni']"
+                :key="date"
+                :class="{ 'booked': bookedDatesPrimary.includes(date) }"
+                :disabled="bookedDatesPrimary.includes(date)"
+                @click="toggleForm(date, 'primary')"
+                class="date-button"
+              >
+                {{ date }}
+              </button>
             </div>
-            <h2 class="calendar-header">LEDIGE DATOER - EGET LOKALE</h2>
-            <div class="calendar-grid">
-                <button class="date-button" @click="toggleForm('6. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">6. Juni</button>
-                <button class="date-button" @click="toggleForm('7. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">7. Juni</button>
-                <button class="date-button" @click="toggleForm('8. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">8. Juni</button>
-                <button class="date-button" @click="toggleForm('9. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">9. Juni</button>
-                <button class="date-button" @click="toggleForm('13. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">13. Juni</button>
-                <button class="date-button" @click="toggleForm('14. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">14. Juni</button>
-                <button class="date-button" @click="toggleForm('15. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">15. Juni</button>
-                <button class="date-button" @click="toggleForm('16. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">16. Juni</button>
-                <button class="date-button" @click="toggleForm('20. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">20. Juni</button>
-                <button class="date-button" @click="toggleForm('21. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">21. Juni</button>
-                <button class="date-button" @click="toggleForm('22. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">22. Juni</button>
-                <button class="date-button" @click="toggleForm('23. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">23. Juni</button>
-                <button class="date-button" @click="toggleForm('27. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">27. Juni</button>
-                <button class="date-button" @click="toggleForm('28. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">28. Juni</button>
-                <button class="date-button" @click="toggleForm('29. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">29. Juni</button>
-                <button class="date-button" @click="toggleForm('30. Juni', 'https://gasa-b6bbb-default-rtdb.europe-west1.firebasedatabase.app/eget.json')">30. Juni</button>
-            </div>
-        </section>
-        <section v-if="showForm" class="form-section">
-      <h3>Book Date: {{ selectedDate }}</h3>
-      <form @submit.prevent="submitForm">
-        <label>
-          Navn:
-          <input type="text" v-model="formData.name" required>
-        </label>
-        <label>
-          Email:
-          <input type="email" v-model="formData.email" required>
-        </label>
-        <label>
-          Antal gæster:
-          <input type="number" v-model="formData.guests" required>
-        </label>
-        <label>
-          Tidsrum:
-          <input type="text" v-model="formData.time" required>
-        </label>
-        <label>
-          Message:
-          <textarea v-model="formData.message" required></textarea>
-        </label>
-        <button type="submit">Submit</button>
-        </form>
+      <h2 class="calendar-header">LEDIGE DATOER - EGET LOKALE</h2>
+        <div class="calendar-grid">
+          <button
+            v-for="date in ['6. Juni', '7. Juni', '8. Juni', '9. Juni', '13. Juni', '14. Juni', '15. Juni', '16. Juni', '20. Juni', '21. Juni', '22. Juni', '23. Juni', '27. Juni', '28. Juni', '29. Juni', '30. Juni']"
+            :key="date"
+            :class="{ 'booked': bookedDatesSecondary.includes(date) }"
+            :disabled="bookedDatesSecondary.includes(date)"
+            @click="toggleForm(date, 'secondary')"
+            class="date-button"
+          >
+            {{ date }}
+          </button>
+        </div>
+    </section>
+      <section v-if="showForm" class="form-section">
+       <h3>Book Date: {{ selectedDate }}</h3>
+        <form @submit.prevent="submitForm">
+          <label>
+            Navn:
+            <input type="text" v-model="formData.name" required>
+          </label>
+          <label>
+            Email:
+            <input type="email" v-model="formData.email" required>
+          </label>
+          <label>
+            Antal gæster:
+            <input type="number" v-model="formData.guests" required>
+          </label>
+          <label>
+            Tidsrum:
+            <input type="text" v-model="formData.time" required>
+          </label>
+          <label>
+            Message:
+            <textarea v-model="formData.message" required></textarea>
+          </label>
+          <button type="submit">Submit</button>
+          </form>
         </section>
         <footer>
             <Footeren />
